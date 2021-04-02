@@ -1,22 +1,32 @@
 <template>
-  <div id="app">
-    <router-view/>
+  <div id="app" class="container">
+    <Navbar />
+
+    <!-- メイン要素 -->
+    <div class="row">
+
+      <div class="col-md-8">
+        <!-- 再レンダリングする部分 -->
+        <router-view />
+      </div>
+
+      <div class="col-md-4">
+        <categories />
+      </div>
+
+    </div>
   </div>
 </template>
 
 <script>
-export default {
-  name: 'App',
-}
-</script>
+import Navbar from "./components/Navbar";
+import Categories from "./components/Sidebar/Categories";
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
+export default {
+  components: {
+    Navbar,
+    Categories
+  },
+  name: "App"
+};
+</script>

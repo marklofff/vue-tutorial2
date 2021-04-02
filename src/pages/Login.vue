@@ -1,12 +1,10 @@
 <template>
-    <div>
-        <h1>ログインページ</h1>
-        <router-link to="/">トップページへ戻る</router-link>
-    </div>
+  <div>
+    <h1>ログインページ</h1>
+    <router-link to="/">トップページへ戻る</router-link>
+  </div>
 </template>
 
 <script>
-export default {
-    
-}
+export default {};
 </script>

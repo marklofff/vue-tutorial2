@@ -2,9 +2,15 @@ import Vue from 'vue'
 import App from './App.vue'
 import Vuex from 'vuex'
 import router from './router'
+import { BootstrapVue, BootstrapVueIcons } from 'bootstrap-vue'
+
+import 'bootstrap/dist/css/bootstrap.css'
+import 'bootstrap-vue/dist/bootstrap-vue.css'
 
 Vue.config.productionTip = false
 
+Vue.use(BootstrapVue)
+Vue.use(BootstrapVueIcons)
 Vue.use(Vuex)
 
 const store = new Vuex.Store({
@@ -17,7 +23,28 @@ const store = new Vuex.Store({
         url: "new-post",
         body: "内容",
         date: new Date()
-      }
+      },
+      {
+        id: 2,
+        title: "Vue入門",
+        url: "vue-tutorial",
+        body: "内容",
+        date: new Date()
+      },
+      {
+        id: 3,
+        title: "React入門",
+        url: "react-tutorial",
+        body: "内容",
+        date: new Date()
+      },
+      {
+        id: 4,
+        title: "Angular入門",
+        url: "angular-tutorial",
+        body: "内容",
+        date: new Date()
+      },
     ]
   },
   getters: {
