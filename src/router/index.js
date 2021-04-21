@@ -5,6 +5,7 @@ import Login from '@/pages/Login'
 import PageNotFound from '@/pages/PageNotFound'
 import PostPage from '@/pages/PostPage'
 import CategoryPage from '@/pages/CategoryPage'
+import AboutPage from '@/pages/AboutPage'
 
 Vue.use(VueRouter)
 
@@ -17,12 +18,17 @@ export default new VueRouter({
             component: HomePage
         },
         {
+            path: '/about',
+            name: 'About',
+            component: AboutPage
+        },
+        {
             path: '/login',
             name: 'login',
             component: Login
         },
         {
-            path: '/post/:id',
+            path: '/post/:url',
             name: 'post',
             component: PostPage
         },

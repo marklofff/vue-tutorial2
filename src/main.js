@@ -22,14 +22,16 @@ const store = new Vuex.Store({
         title: "はじめに",
         url: "new-post",
         body: "内容",
-        date: new Date()
+        date: new Date(),
+        thumb: "http://createyourfuture.com.au/wp-content/uploads/2015/12/FishEye22_0002_5-750x300-1.jpg"
       },
       {
         id: 2,
         title: "Vue入門",
         url: "vue-tutorial",
         body: "内容",
-        date: new Date()
+        date: new Date(),
+        thumb: "https://www.nexty-ele.com/nat/wp-content/uploads/sites/3/2017/10/Header-Cipos-Familypage-750x300.jpg"
       },
       {
         id: 3,

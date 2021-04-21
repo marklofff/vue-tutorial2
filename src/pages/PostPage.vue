@@ -96,6 +96,29 @@
         <p>…or keep all the numbers as <code>1.</code></p>
       </li>
     </ol>
+
+    <div class="card my-4">
+      <h5 class="card-header">コメントする：</h5>
+      <div class="card-body">
+        <form @submit.prevent>
+          <div class="form-group">
+            <textarea class="form-control" rows="4"></textarea>
+          </div>
+          <button @click="createComment()" class="btn btn-primary">投稿</button>
+        </form>
+      </div>
+    </div>
+
+    <div>
+      <div class="media mt-4">
+        <img class="d-flex mr-3 rounded-circle"
+        src="http://placehold.it/50x50" alt="" />
+        <div class="media-body">
+          <h5 class="mt-0">まるまる</h5>
+          いいですね！
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -105,15 +128,20 @@ import { mapGetters } from "vuex";
 export default {
   data() {
     return {
-      postId: this.$route.params.id,
+      postUrl: this.$route.params.url,
     };
   },
   computed: {
     ...mapGetters(["getPost"]),
 
     post() {
-      return this.getPost(this.postId);
+      return this.getPost(this.postUrl);
     },
   },
+  methods: {
+    createComment() {
+      console.log("コメントを投稿する")
+    }
+  }
 };
 </script>
