@@ -4,7 +4,7 @@
       <div class="row">
         <div class="col-lg-6">
           <ul class="list-unstyled mb-0">
-            <li :key="item" v-for="item in items">
+            <li :key="item.id" v-for="item in items">
               <router-link :to="item.url">{{ item.name }}</router-link>
             </li>
           </ul>
