@@ -16,38 +16,7 @@ Vue.use(Vuex)
 const store = new Vuex.Store({
   state: {
     count: 0,
-    posts: [
-      {
-        id: 1,
-        title: "はじめに",
-        url: "new-post",
-        body: "内容",
-        date: new Date(),
-        thumb: "http://createyourfuture.com.au/wp-content/uploads/2015/12/FishEye22_0002_5-750x300-1.jpg"
-      },
-      {
-        id: 2,
-        title: "Vue入門",
-        url: "vue-tutorial",
-        body: "内容",
-        date: new Date(),
-        thumb: "https://www.nexty-ele.com/nat/wp-content/uploads/sites/3/2017/10/Header-Cipos-Familypage-750x300.jpg"
-      },
-      {
-        id: 3,
-        title: "React入門",
-        url: "react-tutorial",
-        body: "内容",
-        date: new Date()
-      },
-      {
-        id: 4,
-        title: "Angular入門",
-        url: "angular-tutorial",
-        body: "内容",
-        date: new Date()
-      },
-    ]
+    posts: []
   },
   getters: {
     count: state => {
@@ -64,6 +33,9 @@ const store = new Vuex.Store({
     },
     decrement(state) {
       state.count--
+    },
+    SET_POSTS(state, posts) {
+      state.posts = posts
     }
   },
   // step 2
@@ -73,6 +45,9 @@ const store = new Vuex.Store({
     },
     decrement({ commit }) {
       commit('decrement')
+    },
+    setPosts({ commit }, posts) {
+      commit('SET_POSTS', posts)
     }
   }
 })

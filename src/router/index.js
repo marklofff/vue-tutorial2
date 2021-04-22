@@ -10,35 +10,35 @@ import AboutPage from '@/pages/AboutPage'
 Vue.use(VueRouter)
 
 export default new VueRouter({
-    mode: 'history',
-    routes: [
-        {
-            path: '/',
-            name: 'HomePage',
-            component: HomePage
-        },
-        {
-            path: '/about',
-            name: 'About',
-            component: AboutPage
-        },
-        {
-            path: '/login',
-            name: 'login',
-            component: Login
-        },
-        {
-            path: '/post/:url',
-            name: 'post',
-            component: PostPage
-        },
-        {
-            path: '/categories/:name',
-            component: CategoryPage
-        },
-        {
-            path: '*',
-            component: PageNotFound
-        },
-    ]
+  mode: 'history',
+  routes: [
+    {
+      path: '/',
+      name: 'HomePage',
+      component: HomePage
+    },
+    {
+      path: '/about',
+      name: 'About',
+      component: AboutPage
+    },
+    {
+      path: '/login',
+      name: 'login',
+      component: Login
+    },
+    {
+      path: '/post/:url',
+      name: 'post',
+      component: PostPage
+    },
+    {
+      path: '/categories/:name',
+      component: CategoryPage
+    },
+    {
+      path: '*',
+      component: PageNotFound
+    },
+  ]
 })
