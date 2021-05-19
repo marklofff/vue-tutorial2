@@ -33,7 +33,7 @@ export default new VueRouter({
       component: PostPage
     },
     {
-      path: '/categories/:name',
+      path: '/categories/:id',
       component: CategoryPage
     },
     {

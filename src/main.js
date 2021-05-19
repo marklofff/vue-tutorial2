@@ -17,7 +17,8 @@ const store = new Vuex.Store({
   state: {
     count: 0,
     posts: [],
-    categories: []
+    categories: [],
+    categoriesPosts: null
   },
   getters: {
     count: state => {
@@ -25,7 +26,10 @@ const store = new Vuex.Store({
     },
     getPost: (state) => (url) => {
       return state.posts.find(post => post.url === url)
-    }
+    },
+    getCategoriesPosts: (state) => {
+      return state.categoriesPosts
+    },
   },
   // step 3
   mutations: {
@@ -40,7 +44,10 @@ const store = new Vuex.Store({
     },
     SET_CATEGORIES(state, categories) {
       state.categories = categories
-    }
+    },
+    SET_CATEGORIES_POSTS(state, posts) {
+      state.categoriesPosts = posts
+    },
   },
   // step 2
   actions: {
@@ -55,6 +62,9 @@ const store = new Vuex.Store({
     },
     setCategories({ commit }, categories) {
       commit('SET_CATEGORIES', categories)
+    },
+    setCategoriesPosts({ commit }, posts) {
+      commit('SET_CATEGORIES_POSTS', posts)
     }
   }
 })

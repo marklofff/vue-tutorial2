@@ -29,7 +29,7 @@ export default {
   },
   methods: {
     getCategoryURL(category) {
-      return "/categories/" + category.title_url
+      return "/categories/" + category.id
       // return `/categories/${category.title_url}`
     }
   },

@@ -65,6 +65,7 @@ export default {
       }
     })
 
+    // storeのsetPostsを呼んで、投稿(data.contents)を格納する
     this.$store.dispatch('setPosts', data.contents)
   }
 };
