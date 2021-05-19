@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div v-if="getCategoriesPosts">
     <h1 class="my-4">{{ getCategoriesPosts.title }}</h1>
 
     <div
