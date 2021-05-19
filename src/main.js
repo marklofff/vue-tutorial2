@@ -16,7 +16,8 @@ Vue.use(Vuex)
 const store = new Vuex.Store({
   state: {
     count: 0,
-    posts: []
+    posts: [],
+    categories: []
   },
   getters: {
     count: state => {
@@ -36,6 +37,9 @@ const store = new Vuex.Store({
     },
     SET_POSTS(state, posts) {
       state.posts = posts
+    },
+    SET_CATEGORIES(state, categories) {
+      state.categories = categories
     }
   },
   // step 2
@@ -48,6 +52,9 @@ const store = new Vuex.Store({
     },
     setPosts({ commit }, posts) {
       commit('SET_POSTS', posts)
+    },
+    setCategories({ commit }, categories) {
+      commit('SET_CATEGORIES', categories)
     }
   }
 })

@@ -2,24 +2,35 @@
   <div>
     <h1 class="my-4">ホームページ</h1>
 
-    <div :key="post.id" v-for="post in posts">
+    <div
+      :key="post.id"
+      v-for="post in posts"
+    >
       <div class="card mb-4">
         <img
           class="card-img-top"
           v-if="post.thumbnail"
           :src="post.thumbnail"
-          alt="thumbnail">
+          alt="thumbnail"
+        >
         <img
           v-else
-          src="http://placehold.it/750x300">
+          src="http://placehold.it/750x300"
+        >
         <div class="card-body">
           <h3 class="card-title">{{ post.title }}</h3>
-          <div class="card-text" v-html="post.body"></div>
+          <div
+            class="card-text"
+            v-html="post.body"
+          ></div>
 
-          <router-link class="btn btn-primary" :to="getUrl(post)">続きを読む</router-link>
+          <router-link
+            class="btn btn-primary"
+            :to="getUrl(post)"
+          >続きを読む</router-link>
         </div>
         <div class="card-footer text-muted">
-          投稿日：{{ post.publishedAt }} 
+          投稿日：{{ post.publishedAt }}
         </div>
       </div>
     </div>
